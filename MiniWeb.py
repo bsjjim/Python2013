@@ -25,11 +25,11 @@ class MiniWeb(threading.Thread):
         self.s.bind(("localhost", self.port))
         self.s.listen(1)
         while 1:
-            print ('소켓 연결')
+            print ('이해를 할 수 없군')
             try:
 
                 conn, addr = self.s.accept()
-                print('연결된 소켓' , addr)
+                print('한글이 왜 깨지지' , addr)
                 recvmsg = conn.recv(1024)
                 conn.send('sdfasd'.encode('utf-8'))
                 conn.close()
